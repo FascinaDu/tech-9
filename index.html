@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech9 - Assistência Técnica Especializada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background-color: #e60000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        
+        .welcome-msg {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .welcome-msg h2 {
+            color: #e60000;
+            margin-bottom: 10px;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .tab-button {
+            background-color: #e60000;
+            color: white;
+            border: none;
+            padding: 15px 0;
+            flex: 1;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        
+        .tab-button:hover, .tab-button.active {
+            background-color: #b30000;
+        }
+        
+        .tab-button:not(:last-child) {
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .feature-card {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #e60000;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial {
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff0f0;
+            border-left: 4px solid #e60000;
+            border-radius: 4px;
+        }
+        
+        .testimonial .rating {
+            color: #ffaa00;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial .author {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: right;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        
+        .contact-info {
+            margin-top: 10px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+        
+        .social-icons {
+            margin-top: 15px;
+        }
+        
+        .social-icons span {
+            margin: 0 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tech9</h1>
+            <p>Assistência Técnica Especializada</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="welcome-msg">
+            <h2>Bem-vindo à Tech9!</h2>
+            <p>Somos especializados em assistência técnica de qualidade para todos os seus dispositivos eletrônicos. Conte com nossa equipe de profissionais qualificados para resolver seus problemas.</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('suporte')">Suporte Online</button>
+            <button class="tab-button" onclick="openTab('compra')">Compra Segura</button>
+            <button class="tab-button" onclick="openTab('avaliacoes')">Avaliações</button>
+        </div>
+
+        <div id="suporte" class="tab-content active">
+            <h2>Suporte Online</h2>
+            <div class="feature-card">
+                <h3>Atendimento 24/7</h3>
+                <p>Nossa equipe está disponível 24 horas por dia, 7 dias por semana para atender suas necessidades técnicas.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Diagnóstico Remoto</h3>
+                <p>Realizamos diagnóstico remoto de problemas, economizando seu tempo e dinheiro.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Chat ao Vivo</h3>
+                <p>Converse com nossos técnicos em tempo real através do nosso chat online.</p>
+            </div>
+            <button class="tab-button" style="width: 100%; margin-top: 15px">Iniciar Chat</button>
+        </div>
+
+        <div id="compra" class="tab-content">
+            <h2>Compra Segura</h2>
+            <div class="feature-card">
+                <h3>Pagamento Seguro</h3>
+                <p>Utilizamos os mais avançados sistemas de criptografia para proteger suas informações financeiras.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Garantia Estendida</h3>
+                <p>Todos os nossos serviços incluem garantia de 90 dias, com opção de extensão.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Rastreamento de Pedidos</h3>
+                <p>Acompanhe o status do seu serviço em tempo real através da nossa plataforma.</p>
+            </div>
+            <button class="tab-button" style="width: 100%; margin-top: 15px">Ver Produtos</button>
+        </div>
+
+        <div id="avaliacoes" class="tab-content">
+            <h2>Avaliações e Depoimentos</h2>
+            <div class="testimonial">
+                <div class="rating">★★★★★</div>
+                <p>"Serviço excelente! Consertaram meu notebook em menos de 24 horas e ainda fizeram uma limpeza completa."</p>
+                <div class="author">- Carlos Silva</div>
+            </div>
+            <div class="testimonial">
+                <div class="rating">★★★★★</div>
+                <p>"Equipe muito atenciosa e profissional. Resolveram um problema complicado no meu smartphone que outras assistências não conseguiram."</p>
+                <div class="author">- Ana Oliveira</div>
+            </div>
+            <div class="testimonial">
+                <div class="rating">★★★★☆</div>
+                <p>"Serviço de qualidade e preço justo. Recomendo a todos que precisam de assistência técnica confiável."</p>
+                <div class="author">- Marcos Santos</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3>Tech9 - Assistência Técnica</h3>
+            <div class="contact-info">
+                <p>📱 (11) 99373-1550</p>
+                <p>✉️ Instagram: @tech.n0v </p>
+                <p>🏠 Colégio Saber - Jundiaí, SP</p>
+            </div>
+            <div class="social-icons">
+                <span>📱</span>
+                <span>💻</span>
+                <span>📧</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            // Hide all tab content
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tab buttons
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            // Show the specific tab content and add active class to the button
+            document.getElementById(tabName).classList.add("active");
+            
+            // Find the button that opened the tab and add active class
+            var buttons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < buttons.length; i++) {
+                if (buttons[i].getAttribute("onclick") && buttons[i].getAttribute("onclick").includes(tabName)) {
+                    buttons[i].classList.add("active");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
